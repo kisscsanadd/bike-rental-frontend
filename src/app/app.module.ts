@@ -1,3 +1,5 @@
+import { BikeService } from './service/bike.service';
+import { LocationService } from './service/location.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,12 +9,14 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './service/user.service';
+import { BikeListComponent } from './bike-list/bike-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    BikeListComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,7 @@ import { UserService } from './service/user.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, LocationService, BikeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

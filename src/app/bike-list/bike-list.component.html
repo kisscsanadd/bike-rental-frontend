@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Price</th>
+            <th scope="col">Location</th>
+            <th scope="col">Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bike of bikes">
+            <td>{{ bike.id }}</td>
+            <td>{{ bike.name }}</td>
+            <td>{{ bike.type }}</td>
+            <td>{{ bike.hourlyCost }}</td>
+            <td>{{ bike.location.name }}</td>
+            <td>{{ !bike.isRented }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
